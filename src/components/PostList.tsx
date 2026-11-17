@@ -1,7 +1,11 @@
-import { posts } from './data/posts';
 import { PostCard } from './PostCard';
+import type { Post } from '../types/post';
 
-export function PostList() {
+interface PostListProps {
+  posts: Post[];
+}
+
+export function PostList({ posts }: PostListProps) {
   return (
     <section className="post-list-section">
       <div className="posts-grid">
